@@ -33,3 +33,22 @@ const person = new Human('male', 'Mark', 32);
 console.log('Prototype Entity: ', person);
 console.log('Prototype Method: ', person.say());
 // -------------------------------------------------
+
+// ------- Prototype way, with Object.create ---------
+const Alien = {
+  init(sex, name, age) {
+    this.sex = sex;
+    this.name = name;
+    this.age = age;
+  },
+  say() {
+    return `${this.name} vocalizes 🎶.`;
+  },
+};
+
+const entity = Object.create(Alien);
+entity.init('male', 'Clark', 18);
+
+console.log('OLOO Entity: ', entity);
+console.log('OLOO Method: ', entity.say());
+// -------------------------------------------------
