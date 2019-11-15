@@ -6,8 +6,27 @@
   <title>Design Patterns</title>
 </head>
 <body>
-  <h1>Prototype/Class Pattern</h1>
-  <p>Allows us to define a blueprint for a specific type of item and then reuse it by creating a new object from that class.</p>
+  <section id="prototype">
+      <h1>Prototype/Class Pattern</h1>
+      <p>
+        Allows us to define a blueprint for a specific type of item and then reuse it by creating a new object from that class. 
+        Alternative: specify the kinds of objects to create using a prototypical instance,
+        and create new objects from the 'skeleton' of an existing object,
+        thus boosting performance and keeping memory footprints to a minimum.
+      </p>
+  </section>
+
+  <section id="constructor">
+      <h1>Constructor/Builder Pattern</h1>
+      <p>
+        The constructor pattern is one step further from the class pattern, 
+        where we leverage a class created to initiate a new extended class from it. 
+        Alternative: Object constructors are used to create specific types of objects — 
+        both preparing the object for use and accepting arguments which a constructor can use to set the values of member properties
+        and methods when the object is first created..
+      </p>
+  </section>
   <script src="prototype-class.js"></script>
+  <script src="constructor-builder.js"></script>
 </body>
 </html>
