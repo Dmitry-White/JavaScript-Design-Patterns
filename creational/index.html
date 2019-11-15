@@ -3,17 +3,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>Design Patterns</title>
 </head>
 <body>
+  <section id="header">
+      <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Design Patterns</a>
+            <ul class="left hide-on-med-and-down">
+              <li class="active"><a href="index.html">Creational</a></li>
+              <li><a href="#">Structural</a></li>
+              <li><a href="#">Behavioral</a></li>
+            </ul>
+          </div>
+        </nav>
+  </section>
   <section id="prototype">
-      <h1>Prototype/Class Pattern</h1>
-      <p>
-        Allows us to define a blueprint for a specific type of item and then reuse it by creating a new object from that class. 
-        Alternative: specify the kinds of objects to create using a prototypical instance,
-        and create new objects from the 'skeleton' of an existing object,
-        thus boosting performance and keeping memory footprints to a minimum.
-      </p>
+      <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547807.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Prototype/Class Pattern<i class="material-icons right">more_vert</i></span>
+            <p><a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s07.html">Addy Osmani's Explanation</a></p>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Prototype/Class Pattern<i class="material-icons right">close</i></span>
+            <p>
+                Allows us to define a blueprint for a specific type of item and then reuse it by creating a new object from that class. 
+                Alternative: specify the kinds of objects to create using a prototypical instance,
+                and create new objects from the 'skeleton' of an existing object,
+                thus boosting performance and keeping memory footprints to a minimum.
+            </p>
+          </div>
+        </div>
   </section>
 
   <section id="constructor">
@@ -26,6 +50,7 @@
         and methods when the object is first created..
       </p>
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="prototype-class.js"></script>
   <script src="constructor-builder.js"></script>
 </body>
