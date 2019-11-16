@@ -1,16 +1,15 @@
-let _instance = null;
+let instance = null;
 
 class SingletonCar {
   constructor(doors, engine, color) {
-    if(!_instance) {
+    if (!instance) {
       this.doors = doors;
       this.engine = engine;
       this.color = color;
-      _instance = this;
+      instance = this;
     } else {
-      return _instance;
+      return instance;
     }
-    
   }
 
   drive() {

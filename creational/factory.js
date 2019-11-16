@@ -12,11 +12,13 @@ class CoolCar {
 
 class CarFactory {
   createCar(type) {
-    switch(type) {
+    switch (type) {
       case 'mazda':
         return new CoolCar(4, 'V5', 'red');
       case 'bmw':
         return new CoolCar(4, 'V10', 'black');
+      default:
+        return null;
     }
   }
 }

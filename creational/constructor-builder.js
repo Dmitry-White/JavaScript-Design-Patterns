@@ -15,7 +15,6 @@ class SUV extends BuilderCar {
     super(doors, engine, color);
     this.wheels = 4;
   }
-
 }
 
 const buiderCivic = new BuilderCar(4, 'V6', 'grey');
