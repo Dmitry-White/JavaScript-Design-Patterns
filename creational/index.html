@@ -22,7 +22,8 @@
       </div>
     </nav>
   </section>
-  <section id="prototype" style="width: 30%; margin: auto;">
+
+  <section id="prototype" style="width: 30%; margin: 20px;">
     <div class="card">
       <div class="card-image waves-effect waves-block waves-light">
         <img class="activator"
@@ -49,36 +50,70 @@
     </div>
   </section>
 
-  <section id="constructor" style="width: 30%; margin: auto;">
-      <div class="card">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator"
-              src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547797.png">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">
-              Constructor/Builder Pattern<i class="material-icons right">more_vert</i>
-            </span>
-            <p><a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s01.html">Addy
-                Osmani's Explanation</a></p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Prototype/Class Pattern<i
-                class="material-icons right">close</i></span>
-            <p>
-                The constructor pattern is one step further from the class pattern,
-                where we leverage a class created to initiate a new extended class from it.
-                Alternative: Object constructors are used to create specific types of objects —
-                both preparing the object for use and accepting arguments which a constructor can use to set the values of member
-                properties
-                and methods when the object is first created.
-            </p>
-          </div>
-        </div>
+  <section id="constructor" style="width: 30%; margin: 20px;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547797.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Constructor/Builder Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p><a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s01.html">Addy
+            Osmani's Explanation</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Prototype/Class Pattern<i
+            class="material-icons right">close</i></span>
+        <p>
+          The constructor pattern is one step further from the class pattern,
+          where we leverage a class created to initiate a new extended class from it.
+          Alternative: Object constructors are used to create specific types of objects —
+          both preparing the object for use and accepting arguments which a constructor can use to set the values of
+          member
+          properties
+          and methods when the object is first created.
+        </p>
+      </div>
+    </div>
   </section>
+
+  <section id="singleton" style="width: 30%; margin: 20px;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="http://3.bp.blogspot.com/-TRnuklh5yBc/Ubsvv_WHVpI/AAAAAAAAAhE/ygM-RCG03ro/s1600/Singleton.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Singleton Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p>
+          <a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s04.html">
+            Addy Osmani's Explanation
+          </a>
+        </p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">
+          Singleton Pattern<i class="material-icons right">close</i>
+        </span>
+        <p>
+          Singleton pattern simply prevents our class from creating more than one instance of the blueprint we defined.
+          Alternative: The Singleton pattern is thus known because it restricts instantiation of a class to a single object.
+          Classically, the Singleton pattern can be implemented by creating a class with a method
+          that creates a new instance of the class if one doesn’t exist. 
+          In the event of an instance already existing, it simply returns a reference to that object.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="prototype-class.js"></script>
   <script src="constructor-builder.js"></script>
+  <script src="singleton.js"></script>
 </body>
 
 </html>
