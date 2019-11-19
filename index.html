@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Design Patterns</title>
+</head>
+
+<body>
+  <section id="header">
+    <nav>
+      <div class="nav-wrapper indigo">
+        <a href="index.html" class="brand-logo center">Design Patterns</a>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="creational.html">Creational</a></li>
+          <li><a href="structural.html">Structural</a></li>
+          <li><a href="behavioral.html">Behavioral</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <section id="creational">
+    <h2 class="center">Creational Patterns</h2>
+    <div class="carousel">
+      <a class="carousel-item" href="creational.html">
+        <img alt="Prototype/Class Pattern"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547807.png">
+      </a>
+      <a class="carousel-item" href="creational.html">
+        <img alt="Constructor/Builder Pattern"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547797.png">
+      </a>
+      <a class="carousel-item" href="creational.html">
+        <img alt="Singleton Pattern"
+          src="http://3.bp.blogspot.com/-TRnuklh5yBc/Ubsvv_WHVpI/AAAAAAAAAhE/ygM-RCG03ro/s1600/Singleton.png">
+      </a>
+      <a class="carousel-item" href="creational.html">
+        <img alt="Factory Pattern"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547813.png">
+      </a>
+      <a class="carousel-item" href="creational.html">
+        <img alt="Abstract Factory Pattern" src="http://kamalmeet.com/wp-content/uploads/2013/08/AbstractFactory.jpg">
+      </a>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    const carouselHandler = () => {
+      const elems = document.querySelectorAll('.carousel');
+      M.Carousel.init(elems);
+    };
+    document.addEventListener('DOMContentLoaded', carouselHandler);
+  </script>
+</body>
+
+</html>
