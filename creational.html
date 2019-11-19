@@ -12,12 +12,12 @@
 <body>
   <section id="header">
     <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">Design Patterns</a>
+      <div class="nav-wrapper indigo">
+        <a href="index.html" class="brand-logo center">Design Patterns</a>
         <ul class="left hide-on-med-and-down">
-          <li class="active"><a href="index.html">Creational</a></li>
-          <li><a href="#">Structural</a></li>
-          <li><a href="#">Behavioral</a></li>
+          <li class="active"><a href="creational.html">Creational</a></li>
+          <li><a href="structural.html">Structural</a></li>
+          <li><a href="behavioral.html">Behavioral</a></li>
         </ul>
       </div>
     </nav>
@@ -146,43 +146,42 @@
   </section>
 
   <section id="abstract-factory" style="width: 30%; margin: 20px; float: left;">
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator"
-            src="http://kamalmeet.com/wp-content/uploads/2013/08/AbstractFactory.jpg">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">
-            Abstract Factory Pattern<i class="material-icons right">more_vert</i>
-          </span>
-          <p>
-            <a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s10.html">
-              Addy Osmani's Explanation
-            </a>
-          </p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">
-              Abstract Factory Pattern<i class="material-icons right">close</i>
-          </span>
-          <p>
-            The Abstract Factory pattern allows you abstract factories themselves
-            and enables you to create multiple factories, classes etc.
-            Alternative: Abstract Factory pattern aims to 
-            encapsulate a group of individual factories with a common goal. 
-            It separates the details of implementation of a set of objects
-            from their general usage.
-          </p>
-        </div>
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="http://kamalmeet.com/wp-content/uploads/2013/08/AbstractFactory.jpg">
       </div>
-    </section>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Abstract Factory Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p>
+          <a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s10.html">
+            Addy Osmani's Explanation
+          </a>
+        </p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">
+          Abstract Factory Pattern<i class="material-icons right">close</i>
+        </span>
+        <p>
+          The Abstract Factory pattern allows you abstract factories themselves
+          and enables you to create multiple factories, classes etc.
+          Alternative: Abstract Factory pattern aims to
+          encapsulate a group of individual factories with a common goal.
+          It separates the details of implementation of a set of objects
+          from their general usage.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="prototype-class.js"></script>
-  <script src="constructor-builder.js"></script>
-  <script src="singleton.js"></script>
-  <script src="factory.js"></script>
-  <script src="abstract-factory.js"></script>
+  <script src="creational/prototype-class.js"></script>
+  <script src="creational/constructor-builder.js"></script>
+  <script src="creational/singleton.js"></script>
+  <script src="creational/factory.js"></script>
+  <script src="creational/abstract-factory.js"></script>
 </body>
 
 </html>
