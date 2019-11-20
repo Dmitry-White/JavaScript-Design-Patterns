@@ -24,6 +24,37 @@
   </section>
 
 
+
+  <section id="module" style="width: 30%; margin: 20px; float: left;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547799.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Module Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p><a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s02.html">Addy
+            Osmani's Explanation</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Module Pattern<i class="material-icons right">close</i></span>
+        <p>
+          The Module pattern is used to further emulate the concept of classes in such a way that we’re able to include
+          both public/private methods and variables inside a single object, thus shielding particular parts from the
+          global scope. What this results in is a reduction in the likelihood of our function names conflicting with
+          other functions defined in additional scripts on the page. The disadvantages of the Module pattern are that,
+          as
+          we access both public and private members differently, when we wish to change visibility, we actually have to
+          make changes to each place the member was used.
+          We also can’t access private members in methods that are added to the object at a later point.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
