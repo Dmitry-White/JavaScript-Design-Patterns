@@ -73,12 +73,43 @@
           Each new object we define has a prototype from which it can inherit further properties.
           Prototypes can inherit from other object prototypes but, even more importantly,
           can define properties for any number of object instances.
-          They can be viewed as objects with attributes and methods that can be easily shared across a number of other object prototypes.
+          They can be viewed as objects with attributes and methods that can be easily shared across a number of other
+          object prototypes.
         </p>
       </div>
     </div>
   </section>
 
+  <section id="facade" style="width: 30%; margin: 20px; float: left;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/httpatomoreillycomsourceoreillyimages1547811.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Facade Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p><a href="https://www.oreilly.com/library/view/learning-javascript-design/9781449334840/ch09s09.html">Addy
+            Osmani's Explanation</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Facade Pattern<i class="material-icons right">close</i></span>
+        <p>
+          The Facade pattern provides a convenient higher-level interface to a larger body of code,
+          hiding its true underlying complexity.
+          Think of it as simplifying the API being presented to other developers,
+          something that almost always improves usability.
+          The Facade pattern both simplifies the interface of a class
+          and decouples the class from the code that uses it.
+          This gives us the ability to indirectly interact with subsystems in a way
+          that can sometimes be less prone to error than accessing the subsystem directly.
+          A Facade’s advantages include ease of use and
+          often a small-sized footprint in implementing the pattern.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="structural/module.js"></script>
