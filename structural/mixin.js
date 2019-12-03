@@ -12,9 +12,9 @@ class Car {
 
 const myMixin = {
   accelerate() {
-    return `${this.engine} gives hell to Greta!`
-  }
-}
+    return `${this.engine} gives hell to Greta!`;
+  },
+};
 
 const civic = new Car(4, 'V6', 'grey');
 Object.assign(Car.prototype, myMixin);
