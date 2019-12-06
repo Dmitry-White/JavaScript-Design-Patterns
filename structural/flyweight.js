@@ -28,3 +28,35 @@ function TodoCollection() {
     getCount,
   };
 }
+
+const randomElement = (arr = []) => arr[Math.floor(Math.random() * arr.length)];
+
+const config = {
+  priorities: ['Low', 'Medium', 'High', 'Urgent'],
+  sections: ['Todo', 'In progress', 'Done'],
+  projects: ['None', 'Frontend', 'Backend', 'Mobile'],
+  members: ['None', 'Dmitry', 'Victoria'],
+  completions: [true, false],
+};
+
+const todos = new TodoCollection();
+
+const initialMemory = performance.memory.usedJSHeapSize;
+
+for (let i = 0; i < 1000000; i += 1) {
+  todos.add({
+    name: `Todo Name ${i}`,
+    priority: randomElement(config.priorities),
+    section: randomElement(config.sections),
+    project: randomElement(config.projects),
+    assignTo: randomElement(config.members),
+    complete: randomElement(config.completions),
+  });
+}
+
+const finalMemory = performance.memory.usedJSHeapSize;
+
+const usedMemory = (finalMemory - initialMemory) / 1000000;
+
+console.log(`Todo memory used: ${usedMemory} MB.`);
+console.log(`Todo object count: ${todos.getCount()}`);
