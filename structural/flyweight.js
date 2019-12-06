@@ -1,36 +1,3 @@
-function Todo(data) {
-  const {
-    name, priority, section, project, assignTo, complete,
-  } = data;
-
-  this.name = name;
-  this.priority = priority;
-  this.section = section;
-  this.project = project;
-  this.assignTo = assignTo;
-  this.complete = complete;
-}
-
-function TodoCollection() {
-  const todos = {};
-  let count = 0;
-
-  const add = (todo) => {
-    todos[todo.name] = new Todo(todo);
-    count += 1;
-  };
-  const get = (name) => todos[name];
-  const getCount = () => count;
-
-  return {
-    add,
-    get,
-    getCount,
-  };
-}
-
-const randomElement = (arr = []) => arr[Math.floor(Math.random() * arr.length)];
-
 const config = {
   priorities: ['Low', 'Medium', 'High', 'Urgent'],
   sections: ['Todo', 'In progress', 'Done'],
@@ -39,12 +6,84 @@ const config = {
   completions: [true, false],
 };
 
-const todos = new TodoCollection();
+// --------------------------- UTILS -----------------------------------
+const randomElement = (arr = []) => arr[Math.floor(Math.random() * arr.length)];
+// ---------------------------------------------------------------------
 
+// ----------------------- BUSINESS LAYER ------------------------------
+function TodoFlyweight(data) {
+  const {
+    priority,
+    section,
+    project,
+    assignTo,
+    complete,
+  } = data;
+
+  this.priority = priority;
+  this.section = section;
+  this.project = project;
+  this.assignTo = assignTo;
+  this.complete = complete;
+}
+
+const TodoFlyweightFactory = (() => {
+  const todos = {};
+  let count = 0;
+
+  const getFlyweight = (data) => {
+    const {
+      priority,
+      section,
+      project,
+      assignTo,
+      complete,
+    } = data;
+
+    const id = priority + section + project + assignTo + complete;
+
+    if (!todos[id]) {
+      todos[id] = new TodoFlyweight(data);
+      count += 1;
+    }
+
+    return todos[id];
+  };
+  const getFlyweightCount = () => count;
+
+  return {
+    getFlyweight,
+    getFlyweightCount,
+  };
+})();
+
+function Todo(data) {
+  const {
+    name,
+    priority,
+    section,
+    project,
+    assignTo,
+    complete,
+  } = data;
+
+  this.name = name;
+  this.flyweight = TodoFlyweightFactory.getFlyweight({
+    priority,
+    section,
+    project,
+    assignTo,
+    complete,
+  });
+}
+// -------------------------------------------------------------
+
+// ---------------------- USAGE --------------------------------
 const initialMemory = performance.memory.usedJSHeapSize;
 
 for (let i = 0; i < 1000000; i += 1) {
-  todos.add({
+  // eslint-disable-next-line
+  new Todo({
     name: `Todo Name ${i}`,
     priority: randomElement(config.priorities),
     section: randomElement(config.sections),
@@ -59,4 +98,5 @@ const finalMemory = performance.memory.usedJSHeapSize;
 const usedMemory = (finalMemory - initialMemory) / 1000000;
 
 console.log(`Todo memory used: ${usedMemory} MB.`);
-console.log(`Todo object count: ${todos.getCount()}`);
+console.log(`Todo object count: ${TodoFlyweightFactory.getFlyweightCount()}`);
+// -------------------------------------------------------------
