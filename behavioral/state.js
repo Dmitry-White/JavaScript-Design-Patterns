@@ -1,23 +1,4 @@
 // --------------------- Class version -----------------------------
-class TrafficLight {
-  constructor() {
-    this.states = [new YellowLight(), new GreenLight(), new RedLight()];
-    this.current = this.states[0];
-  }
-
-  change() {
-    const currentIndex = this.states.findIndex(light => light === this.current);
-    const totalStates = this.states.length;
-
-    this.current = currentIndex + 1 < totalStates
-      ? this.states[currentIndex + 1]
-      : this.states[0];
-  }
-
-  sign() {
-    return this.current.sign();
-  }
-}
 
 class Light {
   constructor(light) {
@@ -46,13 +27,33 @@ class YellowLight extends Light {
 }
 
 class GreenLight extends Light {
-	constructor() {
-		super('green');
-	}
+  constructor() {
+    super('green');
+  }
 
-	sign() {
-		return 'GO';
-	}
+  sign() {
+    return 'GO';
+  }
+}
+
+class TrafficLight {
+  constructor() {
+    this.states = [new YellowLight(), new GreenLight(), new RedLight()];
+    [this.current] = this.states;
+  }
+
+  change() {
+    const currentIndex = this.states.findIndex((light) => light === this.current);
+    const totalStates = this.states.length;
+
+    this.current = currentIndex + 1 < totalStates
+      ? this.states[currentIndex + 1]
+      : this.states[0];
+  }
+
+  sign() {
+    return this.current.sign();
+  }
 }
 // -----------------------------------------------------------------
 
@@ -60,23 +61,23 @@ class GreenLight extends Light {
 const greenStatelessObj = {
   light: 'green',
   sign() {
-		return 'GO';
-	}
-}
+    return 'GO';
+  },
+};
 
 const yellowStatelessObj = {
   light: 'yellow',
   sign() {
-		return 'STEADY';
-	}
-}
+    return 'STEADY';
+  },
+};
 
 const redStatelessObj = {
   light: 'red',
   sign() {
-		return 'STOP';
-	}
-}
+    return 'STOP';
+  },
+};
 
 const statefullObj = {
   states: [
@@ -85,10 +86,10 @@ const statefullObj = {
     Object.create(redStatelessObj),
   ],
   init() {
-    this.current = this.states[0];
+    [this.current] = this.states;
   },
   change() {
-    const currentIndex = this.states.findIndex(light => light === this.current);
+    const currentIndex = this.states.findIndex((light) => light === this.current);
     const totalStates = this.states.length;
 
     this.current = currentIndex + 1 < totalStates
@@ -97,8 +98,8 @@ const statefullObj = {
   },
   sign() {
     return this.current.sign();
-  }
-}
+  },
+};
 // -----------------------------------------------------------------
 
 // Class Usage
