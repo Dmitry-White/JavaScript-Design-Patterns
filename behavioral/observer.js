@@ -9,9 +9,9 @@ const News = {
     this.observers.splice(index, index);
   },
   notify(data) {
-    this.observers.forEach(subscriber => subscriber.receive(data));
+    this.observers.forEach((subscriber) => subscriber.receive(data));
   },
-}
+};
 // -------------------------------------------------------------------
 
 // --------------------- Observer / Subscriber -----------------------
@@ -21,13 +21,13 @@ const NewsOutlet = {
     this.news = '';
   },
   receive(data) {
-      this.news = data;
-      this.reportNews();
+    this.news = data;
+    this.reportNews();
   },
   reportNews() {
     console.log(`${this.name}: ${this.news}`);
-  }
-}
+  },
+};
 // -------------------------------------------------------------------
 
 const news = Object.create(News);
