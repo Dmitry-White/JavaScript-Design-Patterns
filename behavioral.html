@@ -64,8 +64,7 @@
         <span class="card-title activator grey-text text-darken-4">
           State Pattern<i class="material-icons right">more_vert</i>
         </span>
-        <p><a href="https://en.wikipedia.org/wiki/State_pattern">Addy
-            Osmani's Explanation</a></p>
+        <p><a href="https://en.wikipedia.org/wiki/State_pattern">Wikipedia Explanation</a></p>
       </div>
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">State Pattern<i class="material-icons right">close</i></span>
@@ -80,10 +79,41 @@
     </div>
   </section>
 
+  <section id="chain" style="width: 30%; margin: 20px; float: left;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="https://www.oreilly.com/library/view/learning-php-design/9781449344900/httpatomoreillycomsourceoreillyimages1529792.png">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Chain of Responsibility Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p><a href="https://www.oreilly.com/library/view/learning-php-design/9781449344900/ch13.html">Addy
+            Osmani's Explanation</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Chain of Responsibility Pattern<i
+            class="material-icons right">close</i></span>
+        <p>
+          The Chain of Responsibility design pattern separates
+          the sender of a request from the receiver.
+          This avoids coupling of the requester and receiver.
+          Further, the pattern allows a request to be passed along a chain
+          to several different objects that have an opportunity to handle the request.
+          The sender doesn’t need to know which object handles the request,
+          and the object doesn’t need to know who sent the request.
+          There’s no coupling between the two.
+        </p>
+      </div>
+    </div>
+  </section>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="behavioral/observer.js"></script>
   <script src="behavioral/state.js"></script>
+  <script src="behavioral/chain.js"></script>
 </body>
 
 </html>
