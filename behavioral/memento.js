@@ -1,6 +1,9 @@
 const Originator = {
   init({
-    name, street, city, state,
+    name,
+    street,
+    city,
+    state,
   }) {
     this.name = name;
     this.street = street;
@@ -36,31 +39,20 @@ mike.init({
   state: 'TX',
 });
 
-const john = Object.create(Originator);
-john.init({
-  name: 'John Wang',
-  street: '48th Street',
-  city: 'San Jose',
-  state: 'CA',
-});
-
 const caretaker = Object.create(CareTaker);
 
-console.log('Init: ', mike, john);
+console.log('Init: ', mike);
 
 // save state
 
 caretaker.add(1, mike.hydrate());
-caretaker.add(2, john.hydrate());
 
 // mess up their names
 
 mike.name = 'King Kong';
-john.name = 'Superman';
-console.log('Changed: ', mike, john);
+console.log('Changed: ', mike);
 
 // restore original state
 
 mike.dehydrate(caretaker.get(1));
-john.dehydrate(caretaker.get(2));
-console.log('Restored: ', mike, john);
+console.log('Restored: ', mike);
