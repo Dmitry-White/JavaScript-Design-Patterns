@@ -43,11 +43,13 @@ const goods = {
   weight: 1.56,
 };
 
-Shipping.setStrategy(UPS);
-console.log('Shipping with UPS: ', Shipping.calculate(goods));
+const shipping = Object.create(Shipping);
 
-Shipping.setStrategy(DHL);
-console.log('Shipping with DHL: ', Shipping.calculate(goods));
+shipping.setStrategy(UPS);
+console.log('Shipping with UPS: ', shipping.calculate(goods));
 
-Shipping.setStrategy(Fedex);
-console.log('Shipping with Fedex: ', Shipping.calculate(goods));
+shipping.setStrategy(DHL);
+console.log('Shipping with DHL: ', shipping.calculate(goods));
+
+shipping.setStrategy(Fedex);
+console.log('Shipping with Fedex: ', shipping.calculate(goods));
