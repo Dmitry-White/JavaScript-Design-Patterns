@@ -5,14 +5,14 @@ const iterable = {
     const iterator = {
       next() {
         step += 1;
-        return step < length 
+        return step < length
           ? { value: step, done: false }
-          : { value: null, done: true }
-      }
-    }
+          : { value: null, done: true };
+      },
+    };
     return iterator;
-  }
-}
+  },
+};
 
 const iterableObj = iterable[Symbol.iterator]();
 
