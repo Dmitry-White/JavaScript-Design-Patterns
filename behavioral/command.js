@@ -1,5 +1,6 @@
 const CarManager = {
-  execute({ type: name, payload}) {
+  execute(action) {
+    const { type: name, payload } = action;
     return this[name] && this[name](payload);
   },
   requestInfo({ model, id }) {
@@ -10,35 +11,35 @@ const CarManager = {
   },
   arrangeViewing({ model, id }) {
     console.log(`You have successfully booked a viewing of ${model}(${id}).`);
-  }
+  },
 
 };
 
 CarManager.execute({
-  type: "arrangeViewing",
+  type: 'arrangeViewing',
   payload: {
-    model: "Ferrari",
-    id: "14523",
+    model: 'Ferrari',
+    id: '14523',
   },
 });
 CarManager.execute({
-  type: "requestInfo",
+  type: 'requestInfo',
   payload: {
-    model: "Ford Mondeo",
-    id: "54323",
+    model: 'Ford Mondeo',
+    id: '54323',
   },
 });
 CarManager.execute({
-  type: "requestInfo",
+  type: 'requestInfo',
   payload: {
-    model: "Ford Escort",
-    id: "34232",
+    model: 'Ford Escort',
+    id: '34232',
   },
 });
 CarManager.execute({
-  type: "buyVehicle",
+  type: 'buyVehicle',
   payload: {
-    model: "Ford Escort",
-    id: "34232",
+    model: 'Ford Escort',
+    id: '34232',
   },
 });
