@@ -117,9 +117,19 @@
         <span class="card-title grey-text text-darken-4">Enforcer Pattern<i
             class="material-icons right">close</i></span>
         <p>
-          Router pattern helps us turn a giant if-else/switch statement inside out
-          by decoupling the responsibility of routing logic from the business
-          logic of the individual cases.
+          Terse, non-cascading if-else statements that get copy-pasted across functions,
+          often appear at the beginning of a function as a guard clause.
+        </p>
+        <p>
+          Enforcer Pattern is Higher-Order Function with a guard clause
+          that enforces some authorization rule, like requiring the word “sudo”
+          or checking if the current user is an admin.
+        </p>
+        <p>
+          It’s as though we’re writing immutable code, and like immutable data structures,
+          this style of coding has great design benefits and prevents regressions.
+          None of our existing unit tests will change, and the new code already follows
+          the single responsibility principle.
         </p>
       </div>
     </div>
@@ -128,7 +138,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="miscellaneous/nested-ternaries.js"></script>
   <script src="miscellaneous/router-pattern.js"></script>
-  <script src="miscellaneous/enforcer-pattern.js"></script>
+  
+  <script src="miscellaneous/enforcer-pattern/index.js"></script>
+  <script src="miscellaneous/enforcer-pattern/1. naive-enforcer.js"></script>
+  <script src="miscellaneous/enforcer-pattern/2. better-enforcer.js"></script>
+  <script src="miscellaneous/enforcer-pattern/3. best-enforcer.js"></script>
 </body>
 
 </html>
