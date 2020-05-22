@@ -79,9 +79,23 @@
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Router Pattern<i class="material-icons right">close</i></span>
         <p>
-          Typically, if-else statements could be described with
-          switch statements, except for the cases where test conditions
-          could not be described with strict equality.
+          Router pattern helps us turn a giant if-else/switch statement inside out
+          by decoupling the responsibility of routing logic from the business
+          logic of the individual cases.
+        </p>
+        <p>
+          With "Router pattern" the control flow is replaced with a data structure -
+          many problems that traditionally solved algorithmically can be described much more
+          elegantly with a data structure. In backend terminology, "responses" are "routes"
+          and "responder" is "router".
+        </p>
+        <p>
+          "Router pattern" helps us discover common needs across if-else/switch cases and
+          provides a flexible interface to DRY them up. With each case extracted into a function,
+          we could unit test each response without going through routing logic first.
+        </p>
+        <p>
+          "Router pattern" helps solve the same problems in FP that polymorphism does in OOP.
         </p>
       </div>
     </div>

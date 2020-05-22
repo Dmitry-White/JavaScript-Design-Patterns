@@ -38,27 +38,6 @@ console.log(responder_IfElse('where is Mirror Lake'));
 
 /* --------------------------------------------------------------------- */
 
-/*
-  Sometimes the number of if-else statements (or ternaries) just gets
-  longer and longer which promotes a sloppy inconsistent boundary between
-  the individual cases and the mapping logic that decides which case to run.
-
-  Router pattern helps us turn a giant if-else/switch statement inside out
-  by decoupling the responsibility of routing logic from the business
-  logic of the individual cases.
-  In backend terminology, "responses" are "routes" and "responder" is "router".
-  With "Router pattern" the control flow is replaced with a data structure -
-  many problems that traditionally solved algorithmically can be described much more
-  elegantly with a data structure.
-  Mapping data structure "responses" doesn't have to be an object, it could be an array of
-  object with one object per command - which gives us flexibility.
-  "Router pattern" helps us discover common needs across if-else/switch cases and
-  provides a flexible interface to DRY them up.
-  With each case extracted into a function, we could unit test each response without
-  going through routing logic first.
-  "Router pattern" helps solve the same problems in FP that polymorphism does in OOP.
-*/
-
 const defaultFallback = () => "Sorry, I don't understand that";
 
 const responses_object = {

@@ -30,26 +30,6 @@ resolve({
 
 /* --------------------------------------------------------------------- */
 
-/*
-  Typically, if-else statements could be described with
-  switch statements, except for the cases where test conditions
-  could not be described with strict equality.
-
-  Ternary operator is essentially an if-else "expression".
-  While "if-else statement" runs statements but doesn't return anything,
-  a "ternary expression" evaluates and returns a value of one of the
-  two expressions.
-
-  Syntax of "ternary expression" is just a side benefit.
-  The real benefit:
-     - "if-else statements" are popular in imperative programming
-    which is build on conrol flow. Such code tends to have several
-    entry and exit points.
-     - "ternary expressions" help us think about data flow
-    and produce more declarative code. Such code tends to flow
-    in the same way for any inputs.
-*/
-
 // If-else-based resolve function
 const resolve = (node) => {
   if (isFunction(node)) {
