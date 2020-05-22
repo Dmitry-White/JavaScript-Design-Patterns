@@ -40,8 +40,48 @@
         <span class="card-title grey-text text-darken-4">Nested Ternaries Pattern<i
             class="material-icons right">close</i></span>
         <p>
-          Code with fewer if-else statements is generally less complex
-          because it has fewer edge cases that need to be tested.
+          Typically, if-else statements could be described with
+          switch statements, except for the cases where test conditions
+          could not be described with strict equality.
+        </p>
+        <p>
+          Ternary operator is essentially an if-else "expression".
+          While "if-else statement" runs statements but doesn't return anything,
+          a "ternary expression" evaluates and returns a value of one of the
+          two expressions.
+        </p>
+        <p>
+          Syntax of "ternary expression" is just a side benefit.
+          The real benefit: <br />
+          - "if-else statements" are popular in imperative programming
+          which is build on conrol flow. Such code tends to have several
+          entry and exit points.<br />
+          - "ternary expressions" help us think about data flow
+          and produce more declarative code. Such code tends to flow
+          in the same way for any inputs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="router-pattern" style="width: 30%; margin: 20px; float: left;">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator"
+          src="https://i.ytimg.com/vi/wjzl3M7-Wpw/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAq9dvfDnfAspQUpjTxcGGXEjLiuA">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">
+          Router Pattern<i class="material-icons right">more_vert</i>
+        </span>
+        <p><a href="https://www.youtube.com/watch?v=wjzl3M7-Wpw">Jonathan Martin's Explanation</a></p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">Router Pattern<i class="material-icons right">close</i></span>
+        <p>
+          Typically, if-else statements could be described with
+          switch statements, except for the cases where test conditions
+          could not be described with strict equality.
         </p>
       </div>
     </div>
@@ -50,6 +90,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="miscellaneous/nested-ternaries.js"></script>
+  <script src="miscellaneous/router-pattern.js"></script>
 </body>
 
 </html>
