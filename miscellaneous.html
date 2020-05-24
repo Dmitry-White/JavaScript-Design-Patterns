@@ -151,9 +151,20 @@
         <span class="card-title grey-text text-darken-4">Error Handling Pattern<i
             class="material-icons right">close</i></span>
         <p>
-          Router pattern helps us turn a giant if-else/switch statement inside out
-          by decoupling the responsibility of routing logic from the business
-          logic of the individual cases.
+          If we take advantage of currying,
+          we can eliminate a lot of the extra function calls and argument gathering.
+        </p>
+        <p>
+          This style of creating functions without first gathering
+          and passing around all their arguments is called Point-free style
+          (or Tacit Programming).
+        </p>
+        <p>
+          The best way to combine behaviors is through composition.
+          Rather than cascading if-else statements,
+          complex multiple error handling logic,
+          or try-catch syntax,
+          we handled two kinds of errors through composition.
         </p>
       </div>
     </div>
@@ -169,7 +180,11 @@
   <script src="miscellaneous/enforcer-pattern/2. better-enforcer.js"></script>
   <script src="miscellaneous/enforcer-pattern/3. best-enforcer.js"></script>
 
-  <script src="miscellaneous/error-handling.js"></script>
+  <script src="miscellaneous/error-handling/index.js"></script>
+  <script src="miscellaneous/error-handling/1. naive-handling.js"></script>
+  <script src="miscellaneous/error-handling/2. better-handling.js"></script>
+  <script src="miscellaneous/error-handling/3. even-better-handling.js"></script>
+  <script src="miscellaneous/error-handling/4. best-handling.js"></script>
 </body>
 
 </html>
