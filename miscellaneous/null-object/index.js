@@ -21,24 +21,27 @@
   to these potential errors.
 */
 
-const checkToken = (req, res, next) => {
-  const payload = jwt.verify(req.token, 's3cr3t');
 
-  if (payload && payload.user) {
-    req.user = payload.user;
-  } else {
-    res.status(401).send('Bad token.');
-    return;
-  }
+(() => {
+  const checkToken = (req, res, next) => {
+    const payload = jwt.verify(req.token, 's3cr3t');
 
-  next();
-};
+    if (payload && payload.user) {
+      req.user = payload.user;
+    } else {
+      res.status(401).send('Bad token.');
+      return;
+    }
 
-makeRequestWithToken('g00d_t0k3n');
-// => '200: Welcome to the backend.'
-makeRequestWithToken('3mpt1_t0k3n');
-// => '401: Bad token.'
-makeRequestWithToken('0ld_t0k3n');
-// => TokenExpiredError: jwt expired
-makeRequestWithToken('f@k3_t0k3n');
-// => JsonWebTokenError: jwt malformed
+    next();
+  };
+
+  makeRequestWithToken('g00d_t0k3n');
+  // => '200: Welcome to the backend.'
+  makeRequestWithToken('3mpt1_t0k3n');
+  // => '401: Bad token.'
+  makeRequestWithToken('0ld_t0k3n');
+  // => TokenExpiredError: jwt expired
+  makeRequestWithToken('f@k3_t0k3n');
+  // => JsonWebTokenError: jwt malformed
+})();

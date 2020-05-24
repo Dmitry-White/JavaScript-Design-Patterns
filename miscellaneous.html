@@ -186,20 +186,23 @@
         <span class="card-title grey-text text-darken-4">Null Object Pattern<i
             class="material-icons right">close</i></span>
         <p>
-          If we take advantage of currying,
-          we can eliminate a lot of the extra function calls and argument gathering.
+          Each line of code could be defensive because
+          it can’t safely trust the results of lines before it.
+          With the variation of the Null Object Pattern,
+          we can replace edge cases with benign values.
+          Once we did that, the boundaries became detangled.
         </p>
         <p>
-          This style of creating functions without first gathering
-          and passing around all their arguments is called Point-free style
-          (or Tacit Programming).
+          By substituting a benign value as early as possible,
+          we don’t have to be defensive later on.
+          In OOP, this benign value is called a Null Object.
+          It’s often a subclass of the expected object type,
+          and should respond to the same messages.
         </p>
         <p>
-          The best way to combine behaviors is through composition.
-          Rather than cascading if-else statements,
-          complex multiple error handling logic,
-          or try-catch syntax,
-          we handled two kinds of errors through composition.
+          In FP we won’t create a Null Object class,
+          but we can still lift this Null Object into a variable
+          called nullPayload to better communicate intent.
         </p>
       </div>
     </div>
@@ -220,6 +223,12 @@
   <script src="miscellaneous/error-handling/2. better-handling.js"></script>
   <script src="miscellaneous/error-handling/3. even-better-handling.js"></script>
   <script src="miscellaneous/error-handling/4. best-handling.js"></script>
+
+  <script src="miscellaneous/null-object/index.js"></script>
+  <script src="miscellaneous/null-object/1. naive-handling.js"></script>
+  <script src="miscellaneous/null-object/2. better-handling.js"></script>
+  <script src="miscellaneous/null-object/3. best-null-object.js"></script>
+
 </body>
 
 </html>
